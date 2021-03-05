@@ -1,49 +1,148 @@
 <div class="row">
     <div class="col-12">
-        <h2>Seja muito bem-vindo ao desafio Platform Builders</h2>
+        <h2>Seja muito bem-vindo ao Codesh Front-End Challenge</h2>
         <div>
-            Esse projeto foi desenvolvido em virtude do processo de seleção para o cargo: "Pessoa Desenvolvedora
-            Angular".
-
-            <p>Agradeço antecipadamente pela atenção e obrigada pela oportunidade!</p>
+            <p>Agradeço antecipadamente pela atenção!</p>
 
             <h2 class="mt-5">🤝 Dados para contato:</h2>
             <p>Nome: Ana Flávia Araújo Lima Pinto de Carvalho</p>
             <p>Telefone: (61) 9 9618-0178</p>
             <p>E-mail: anaflavia.alpc@gmail.com</p>
             <p><a href="https://drive.google.com/file/d/14elrb8HtoLBCp8qgo-cSl2gFLsyOhuVt/view?usp=sharing"
-                target="_blank">Link para o currículo </a></p>
+                    target="_blank">Link para o currículo </a></p>
         </div>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="col-12">
-        <h2>👀 Resumo dos requisitos</h2>
-        <p>Desenvolva um SPA que tenha pelo menos 2 telas: uma tela de login, pedindo um usuário e senha (mockar
-            autenticação), e outra que consuma a localização atual do usuário e exiba na interface e no input de
-            pesquisa o endereço atual e também os dados climáticos da região.</p>
+        <h2>Front-End Challenge 🏅 2021</h2>
+
+        <h3>Introdução</h3>
+        <div>
+            Este é um desafio para testar seus conhecimentos de Front-end;
+            O objetivo é avaliar a sua forma de estruturação e autonomia em decisões para construir algo escalável
+            utilizando um framework moderno javascript.
+            Você está livre para usar React.js ou Vue.js ou Angular 8+ no desenvolvimento da solução deste tech
+            challenge.
+            [SPOILER] As instruções de entrega e apresentação do challenge estão no final deste Readme (=
+        </div>
+        <h3>Case</h3>
+        <div>
+            A empresa Pharma Inc, está trabalhando em um projeto em colaboração com sua base de clientes para facilitar
+            a gestão e visualização da informação dos seus pacientes de maneira simples e objetiva em um Dashboard onde
+            podem listar, filtrar e expandir os dados disponíveis.
+            O seu objetivo nesse projeto, é trabalhar no desenvolvimento do Front end que consumirá a API da empresa
+            Pharma Inc seguindo os requisitos propostos neste desafio.
+
+            <h5>Recursos</h5>
+            <ul>
+                <li>1. Estudar a documentação da REST API: https://randomuser.me/documentation</li>
+                <li>2. Utilizar React.js ou Vue.js ou Angular 8+ para construir a solução do Challenge;</li>
+                <li>3. Utilizar Frameworks CSS, recomendamos alguns como:
+
+                    - Tailwind CSS: https://tailwindcss.com/
+                    - Material UI: https://material-ui.com/
+                    - Angular Material: https://material.angular.io/
+                    - Bootstrap: https://getbootstrap.com/
+                    - Bulma: https://bulma.io/
+                </li>
+                <li>4. Trabalhar em um [FORK](https://lab.coodesh.com/help/gitlab-basics/fork-project.md) deste
+                    repositório em seu usuário ou utilizar um repositório em
+                    seu github pessoal (não esqueça de colocar no readme a referência a este challenge);</li>
+            </ul>
+        </div>
+        <h3>Lista de Pacientes</h3>
+        <div>
+            A tela inicial do projeto será um lista de pacientes que deverá conter um buscador para facilitar filtrar
+            todos os que são exibidos na lista, proposta:
+
+            <img src="https://lab.coodesh.com/public-challenges/front-end-challenge-2021/-/raw/master/assets/list.png">
+
+            Para obter os dados, utilizaremos a API do Random User:
+
+            - https://randomuser.me/api/
+
+            <p>Além de realizar a request, devemos aplicar alguns filtros na API:</p>
+
+            <div>- Limitar em 50 resultados por request</div>
+            <div>- Adicionar o parâmetro de paginação para controlar o `Loading more`</div>
+        </div>
+        <h2> Visualizar paciente</h2>
+        <div>
+            <p>Na coluna de ações da tabela, existe o botão visualizar para expandir os dados dos pacientes. Seguir o
+                modelo proposto:</p>
+
+            <img src="https://lab.coodesh.com/public-challenges/front-end-challenge-2021/-/raw/master/assets/view.png">
+
+            <p>Devemos exibir os seguintes campos do paciente:</p>
+
+            <ul>
+                <li>Imagem</li>
+                <li>Nome completo</li>
+                <li>Email</li>
+                <li>Gênero</li>
+                <li>Data de nascimento</li>
+                <li>Telefone</li>
+                <li>Nacionalidade</li>
+                <li>Endereço</li>
+                <li>ID (Número de identificação)</li>
+            </ul>
+        </div>
+        <h3>Extras</h3>
+
+        Além do desafio proposto com as duas telas, temos alguns diferenciais:
+
         <ul>
-            <li>Deve ser possível inserir manualmente o endereço a ser buscado na API.</li>
-            <li>Para fazer essa busca, pode-se usar a API do Open Weather Map:
-                <a href="https://openweathermap.org/api">https://openweathermap.org/api</a>
+            <li><b>Diferencial 1</b> Adicionar um filtro por Gênero na tabela;</li>
+            <li><b>Diferencial 2</b> Configurar o buscador para poder filtrar por nome e nacionalidade;</li>
+            <li><b>Diferencial 3</b> Adicionar o paginador rota para facilitar compartilhar o link e manter a posição
+                na lista;</li>
+            <li><b>Diferencial 4</b> Escrever Unit Tests ou E2E Test na Lista de Pacientes. Escolher a melhor
+                abordagem e biblioteca;</li>
+            <li><b>Diferencial 5</b> Configurar Docker no Projeto para facilitar o Deploy da equipe de DevOps;</li>
+        </ul>
+        <h3> Readme do Repositório</h3>
+
+        <ul>
+            <li>Deve conter o título do projeto</li>
+            <li>Uma descrição sobre o projeto em frase</li>
+            <li>Deve conter uma lista com linguagem, framework e/ou tecnologias usadas</li>
+            <li>Como instalar e usar o projeto (instruções)</li>
+            <li>Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)</li>
+            <li>Se está usando github pessoal, referencie que é um challenge by coodesh </li>
+        </ul>
+
+        <h3> Finalização e Instruções para a Apresentação</h3>
+
+        <p>Avisar sobre a finalização e enviar para correção.</p>
+        <ul>
+            <li>1. Confira se respondeu o Scorecard Front-end;</li>
+            <li>2. Verique se o Readme está bom e faça o commit final em seu repositório;</li>
+            <li>3. Acesse: [https://coodesh.com/review-challenge](https://coodesh.com/review-challenge);</li>
+            <li>4. Coloque seu nome completo; </li>
+            <li>5. Coloque seu e-mail;</li>
+            <li>6. Adicione o repositório com a sua solução;</li>
+            <li>7. Confira a vaga desejada;
+                <img src="https://res.cloudinary.com/coodesh/image/upload/v1612571243/coodesh-teams/challenges/repo.gif">
             </li>
-            <li>Quem estiver deslogado deve ser redirecionado para o login.</li>
+            <li>8. Envie e aguarde as instruções para apresentação da sua solução</li>
         </ul>
-        <h2>📌 Condições</h2>
-        <hr>
+
+        <h3>Instruções para se preparar para a Apresentação:</h3>
         <ul>
-            <li>É permitido o uso de qualquer biblioteca</li>
-            <li>Anexar Print Screen no Readme</li>
-            <li>Utilizar Github para repositório</li>
+            <li>1. Aguarde o e-mail com as instruções de apresentação </li>
+            <li>2. Enquanto isso, crie uma conta na plataforma: https://www.loom.com/ e instale o Desktop App ou
+                Extensão no Chrome: https://www.loom.com/download </li>
+            <li>3. DICA: Será necessário compartilhar a tela durante a gravação ou vídeo chamada. Deixe todos os
+                projetos de solução previamente abertos em seu computador antes de iniciar a gravação ou chamanda de
+                vídeo. Ambientes configurados e prontos para rodar.</li>
+            <li>4. Prepara-se pois você será questionado sobre cada etapa e decisão do Challenge. Prepare uma lista de
+                perguntas, dúvidas, sugestões de melhorias e feedbacks (caso tenha).</li>
         </ul>
-        <h2>🙌 Diferenciais</h2>
-        <hr>
-        <p>Será muito bem valorizado:</p>
-        <ul>
-            <li>Componentização</li>
-            <li>Documentação</li>
-            <li>Interface</li>
-        </ul>
+        <h3> Suporte</h3>
+
+        <div>Use o nosso canal no slack: http://bit.ly/32CuOMy para tirar dúvidas sobre o processo ou envie um e-mail
+            para contato@coodesh.com.</div>
     </div>
 </div>

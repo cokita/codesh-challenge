@@ -4,14 +4,13 @@ import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { InternalRoutingModule } from './internal-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { LocationComponent } from './location/location.component';
 import { AgmCoreModule } from '@agm/core';
 import { environment } from 'src/environments/environment';
-import { WeatherComponent } from './weather/weather.component';
+import { PatientsComponent } from './patients/patients.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, LayoutComponent, LocationComponent, WeatherComponent],
+  declarations: [HomeComponent, LayoutComponent, PatientsComponent],
   imports: [
     CommonModule,
     SharedModule,

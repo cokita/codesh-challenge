@@ -27,7 +27,7 @@ export class LoginInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<any>> {
     if(environment.mock && request.method === "POST" && request.url === `${environment.endpoint_mock}/login`) {
       const body = Object.assign({password: null, user: null}, request.body);
-      if(body && body.password == '123456' && body.user == 'builders') {
+      if(body && body.password == '123456' && body.user == 'codesh') {
         return of(new HttpResponse({ status: 200, body: ResponseLogin }));
       }else{
         this.toastService.showDanger("Usuário ou senha inválidos");
