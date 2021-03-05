@@ -1,0 +1,33 @@
+<div class="sidenav">
+    <div class="login-main-text">
+        
+       <h2>Desafio<br></h2>
+       <img src="../../../assets/images/logo-bc.svg"/>
+       <p>Faça login para prosseguir</p>
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+          <form [formGroup]="loginForm" class="form-login" (ngSubmit)="login()">
+             <div class="form-group">
+                <label>Usuário</label>
+                <input type="text" class="form-control" formControlName="user" placeholder="Informe suas credenciais de acesso." 
+                [ngClass]="{ 'is-invalid': submitted && f.user.errors }">
+                <div class="invalid-feedback" *ngIf="f.user.errors">
+                  <div *ngIf="f.user.errors.required">O nome do usuário é obrigatório.</div>
+                </div>
+             </div>
+             <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Informe suas credenciais de acesso." 
+                [ngClass]="{ 'is-invalid': submitted && f.user.errors }">
+                <div class="invalid-feedback" *ngIf="f.password.errors">
+                  <div *ngIf="f.password.errors.required">A senha é obrigatória.</div>
+                </div>
+             </div>
+             <button type="submit" class="btn btn-black">Entrar</button>
+          </form>
+       </div>
+    </div>
+ </div>
